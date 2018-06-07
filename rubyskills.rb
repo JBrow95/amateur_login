@@ -16,3 +16,7 @@ def pass()
 
 end
 
+user = userName()
+pw = pass()
+
+puts "Login Succesful, Welcome #{user.capitalize}!"
