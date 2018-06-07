@@ -1,40 +1,46 @@
 #Beginner Login
+counter = 0
 
-# def userName()
+def login(counter)
 
-# 	puts "Enter Username: "
+	puts "Enter Username: "
 
-# 	user_name = gets.chomp
+	user_name = gets.chomp
 
-# end
+	puts "Enter Password: "
 
-# def pass()
+	pass_word = gets.chomp
 
-# 	puts "Enter Password: "
+	if user_name == "test" && pass_word == "123"
+		dice_roll()
+	else
+		if counter == 3
+			puts "She cannot take any more of this, Captain!"
+			exit
+		else
+			puts "Incorrect username/password"
+			counter = counter + 1
+			login(counter)
+		end
+	end
+end
 
-# 	pass_word = gets.chomp
 
-# end
-
-# user = userName()
-# pw = pass()
-
-# puts "Login Succesful, Welcome #{user.capitalize}!"
+#puts "Login Succesful, Welcome #{user.capitalize}!"
 
 # Short game to play after logged in
 
-def ar1()
+def dice_roll()
+	ar1 = [1,2,3,4,5]
 
-	if ar1 == 3
+	puts "Choose a number #{ar1}"
+
+	selection = gets.chomp.to_i
+	if selection == ar1.sample
 		puts "You win!"
-	elsif ar1 > 3 
-		puts "You lose"
-	elsif ar1 < 3 
+	else  
 		puts "You lose"
 	end
-	ar1 
 end
 
-ar1 = [1,2,3,4,5]
-
-puts ar1
+login(counter)
