@@ -8,3 +8,11 @@ def userName()
 
 end
 
+def pass()
+
+	puts "Enter Password: "
+
+	pass_word = gets.chomp
+
+end
+
