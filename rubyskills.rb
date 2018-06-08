@@ -43,4 +43,15 @@ def dice_roll()
 	end
 end
 
-login(counter)
+	puts "Would you like to play again? y/n"
+
+	ans = gets.chomp
+
+	if ans == "y"
+		dice_roll()
+	else
+		puts "Thanks for playing!"
+		exit
+	end
+
+login(1)
