@@ -41,8 +41,10 @@ def dice_roll()
 	else  
 		puts "You lose"
 	end
+	answer()
 end
 
+def answer()
 	puts "Would you like to play again? y/n"
 
 	ans = gets.chomp
@@ -51,7 +53,9 @@ end
 		dice_roll()
 	else
 		puts "Thanks for playing!"
+
 		exit
 	end
+end
 
 login(1)
